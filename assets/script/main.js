@@ -10,7 +10,12 @@ open.addEventListener("click", () =>
 
 close.addEventListener("click", () =>
 {
+    modal.classList.add("out");
+    setTimeout(() => {
+        
     modal.classList.remove("active");
+    modal.classList.remove("out");
+    }, 0500);
 });
 
 button.addEventListener("click", () =>
