@@ -1,0 +1,116 @@
+*
+{
+    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #F2785C;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.openModal
+{
+    width: 200px;
+    height: 70px;
+    border-radius: 16px;
+    padding: 16px;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+    border: solid #71030C 3px;
+    color: #71030C;
+    background-color: #FA8181;
+}
+
+.modalContainer
+{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modalContainer.active{
+    display:flex;
+    animation: fadeIn 0.5s  ease;
+}
+
+.modalContainer.active.out{
+    animation: fadeOut 0.5s  ease;
+}
+
+.modalPopup
+{
+    margin: auto;
+    background-color: #F25252;
+    height: 300px;
+    width: 590px;
+    border-radius: 16px;
+}
+
+.modalPopup p
+{
+    margin: 130px 0 0 0;
+    text-justify: distribute;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.closeModal img
+{
+    width: 23px;
+    height: 26px;
+}
+
+.closeModal
+{
+    margin: 20px 25px 0 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 23px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0);
+    float: right;
+}
+
+.closeButton
+{
+    margin: 70px 10px 0 0;
+    width: 120px;
+    height: 60px;
+    border-radius: 16px;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.3rem;
+    float: right;
+    border: solid #71030C 3px;
+    color: #71030C;
+    background-color: #FA8181;
+}
+
+@keyframes fadeIn
+{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
+
+@keyframes fadeOut
+{
+    from{opacity: 100%;}
+    to{opacity: 0%;}
+}
